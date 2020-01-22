@@ -1,0 +1,21 @@
+@hostname = http://localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@createdAt = {{$datetime iso8601}}
+
+###
+
+@name = hello
+
+GET http://localhost:3000/users HTTP/1.1
+
+###
+
+POST http://localhost:3000/users/login HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+    "email": "111@qq.com",
+    "password": "111111"
+}
